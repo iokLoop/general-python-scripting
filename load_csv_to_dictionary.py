@@ -9,8 +9,10 @@ def load():
     dict = {}
     with open('file.csv',"r") as csv_file:
         for row in csv_file:
-            (key, val) = row.rstrip("\n").split(",")
-            dict[key]=val
+            # using string manipulation and unpacking style for the row variable
+            (key, value) = row.rstrip("\n").split(",")
+            # adding key:value pair into the dictionary
+            dict[key]=value
     return dict    
 
 
